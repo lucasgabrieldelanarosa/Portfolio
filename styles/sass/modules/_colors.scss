@@ -1,6 +1,17 @@
-// Background Colors
+// Font colors
+$header-logo-font-color: rgb(87, 139, 87);
+$header-btn-font-color: rgb(62, 105, 62);
+$skills-title: lightgreen;
+$home-section-font-color-1: rgb(56, 97, 56);
+$home-section-font-color-2: rgb(134, 71, 81);
+$home-section-font-color-3: rgb(109, 3, 56);
+$home-section-font-color-4: rgb(18, 93, 128);
 
+// Background Colors
 $body-bg-color: rgb(68, 0, 34), rgb(0, 53, 78);
-$header-bg-color: rgba(17, 17, 17, 0.623);
-$btns-hover-bg-color: rgb(97, 148, 118);
-$skill-grid-container-bg-color: rgba(128, 128, 128, 0.253);
+$header-bg-color: rgba(231, 222, 222, 0.623);
+$btns-hover-bg-color: rgb(170, 201, 166);
+$skill-grid-container-bg-color: rgba(147, 224, 116, 0.25);
+
+// Box Shadow
+$skill-grid-container-box-shadow: 0 0 15px 5px rgb(97, 148, 118);

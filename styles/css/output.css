@@ -26,12 +26,14 @@ body {
   position: fixed;
   width: 100%;
   padding: 1rem 3rem;
-  background-color: rgba(17, 17, 17, 0.623);
+  background-color: rgba(231, 222, 222, 0.623);
   z-index: 2;
+  height: 15vh;
 }
 .header-title {
   font-family: "Dancing Script", cursive;
   font-size: 5vw;
+  color: rgb(87, 139, 87);
 }
 .header-nav-btns-container {
   display: flex;
@@ -53,10 +55,10 @@ body {
   background: none;
   border-radius: 15px;
   border: none;
-  color: black;
+  color: rgb(62, 105, 62);
 }
 .header-nav-btns:hover {
-  background-color: rgb(97, 148, 118);
+  background-color: rgb(170, 201, 166);
   cursor: pointer;
 }
 
@@ -68,27 +70,47 @@ body {
 }
 .main-home-section p {
   font-family: "Shadows Into Light", cursive;
-  font-size: 9vw;
+  font-size: 10vw;
+  transition: color 0.5s ease-in-out;
+  animation: changeColor 5s infinite;
+}
+@keyframes changeColor {
+  0% {
+    color: rgb(56, 97, 56);
+  }
+  25% {
+    color: rgb(134, 71, 81);
+  }
+  50% {
+    color: rgb(109, 3, 56);
+  }
+  75% {
+    color: rgb(18, 93, 128);
+  }
+  100% {
+    color: rgb(56, 97, 56);
+  }
 }
 .main-skills-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  min-height: 85vh;
-  margin-bottom: 3rem;
+  gap: 2rem;
+  height: 85vh;
 }
 .main-skills-section h2 {
   font-size: 4vw;
+  color: lightgreen;
 }
 .main-skills-section .skills-grid-container {
-  background: rgba(128, 128, 128, 0.253);
-  box-shadow: 0 0 15px 5px rgb(99, 95, 95);
+  background: rgba(147, 224, 116, 0.25);
+  box-shadow: 0 0 15px 5px rgb(97, 148, 118);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   padding: 3% 5%;
+  border-radius: 15px;
 }
 .main-skills-section .skills-grid-container .skill {
   display: flex;
@@ -100,11 +122,11 @@ body {
   text-decoration: none;
 }
 .main-skills-section .skills-grid-container .skill p {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 .main-skills-section .skills-grid-container .skill-img {
   filter: grayscale(1);
-  width: 6vw;
+  width: 5vw;
   transition: filter 1.5s, scale 0.5s;
 }
 .main-skills-section .skills-grid-container .skill-img:hover {
