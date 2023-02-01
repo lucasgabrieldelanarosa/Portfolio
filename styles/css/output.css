@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(68, 0, 34), rgb(0, 53, 78));
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 3rem;
+  background-color: rgba(17, 17, 17, 0.623);
+  z-index: 2;
+}
+.header-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 5vw;
+}
+.header-nav-btns-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header-nav-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8vw;
+  font-family: "Courgette", cursive;
+  font-size: 2vw;
+  font-weight: 800;
+  text-decoration: underline;
+  padding: 1%;
+  background: none;
+  border-radius: 15px;
+  border: none;
+  color: black;
+}
+.header-nav-btns:hover {
+  background-color: rgb(97, 148, 118);
+  cursor: pointer;
+}
+
+.main-home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main-home-section p {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 9vw;
+}
+.main-skills-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  min-height: 85vh;
+  margin-bottom: 3rem;
+}
+.main-skills-section h2 {
+  font-size: 4vw;
+}
+.main-skills-section .skills-grid-container {
+  background: rgba(128, 128, 128, 0.253);
+  box-shadow: 0 0 15px 5px rgb(99, 95, 95);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  padding: 3% 5%;
+}
+.main-skills-section .skills-grid-container .skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: black;
+  text-decoration: none;
+}
+.main-skills-section .skills-grid-container .skill p {
+  font-size: 2vw;
+}
+.main-skills-section .skills-grid-container .skill-img {
+  filter: grayscale(1);
+  width: 6vw;
+  transition: filter 1.5s, scale 0.5s;
+}
+.main-skills-section .skills-grid-container .skill-img:hover {
+  filter: grayscale(0);
+  scale: 1.1;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=output.css.map */

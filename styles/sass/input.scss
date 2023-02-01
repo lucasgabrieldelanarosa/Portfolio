@@ -1,0 +1,115 @@
+@use './forward.scss' as i;
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(to right, i.$body-bg-color);
+    min-height: 100vh;
+}
+
+.header {
+    @include i.flex(row, space-between, center, null);
+    position: fixed;
+    width: 100%;
+    padding: 1rem 3rem;
+    background-color: i.$header-bg-color;
+    z-index: 2;
+
+    &-title {
+        font-family: i.$logo-font;
+        font-size: 5vw;
+    }
+
+    &-nav-btns-container {
+        @include i.flex(row, center, center, 1.5rem);
+    }
+
+    &-nav-btns {
+        @include i.flex(null, center, center, null);
+        width: 8vw;
+        font-family: i.$bnts-font;
+        font-size: 2vw;
+        font-weight: 800;
+        text-decoration: underline;
+        padding: 1%;
+        background: none;
+        border-radius: 15px;
+        border: none;
+        color: black;
+
+        &:hover {
+            background-color: i.$btns-hover-bg-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.main{
+
+    &-home-section{
+        @include i.flex(null, center, center, null);
+        height: 100vh;
+
+        p{
+            font-family: i.$home-section-font;
+            font-size: 9vw;
+        }
+    }
+
+    &-skills-section{
+        @include i.flex(column, center, center, 1rem);
+        min-height: 85vh;
+        margin-bottom: 3rem;
+
+        h2{
+            font-size: 4vw;
+        }
+
+        .skills-grid-container{
+            background: i.$skill-grid-container-bg-color;
+            box-shadow: 0 0 15px 5px rgb(99, 95, 95);
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            padding: 3% 5%;
+
+            .skill{
+                @include i.flex(column, center, center, 1rem);
+                color: black;
+                text-decoration: none;
+
+                p{
+                    font-size: 2vw;
+                }
+
+                &-img{
+                    filter: grayscale(1);
+                    width: 6vw;
+                    transition: filter 1.5s, scale 0.5s;
+
+                    &:hover{
+                        filter: grayscale(0);
+                        scale: 1.1;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    
+}
